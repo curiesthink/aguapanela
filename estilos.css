@@ -2,7 +2,7 @@
 
 .texto{
    
-    font-size: 25px;
+    font-size: 30px;
     padding-top: 70px;
     text-align: Aldine;
     color: rgb(20, 20, 20);
@@ -16,3 +16,113 @@ body{
     
 
 }
+
+
+.imag1{
+height: 300px;
+width: 350px;
+background-image: url(tecno\ img.jpg);
+
+}
+
+.imag2{
+    height: 400px;
+    width: 710px;
+    background-image: url(mapa\ mental.png);
+}
+
+.imagingles1{
+    height: 170px;
+    width: 300px;
+    background-image: url(imag\ inglés\ 1.png);
+
+}
+
+.imagingles2{
+    height: 170px;
+    width: 300px;
+    background-image: url(imag\ inglés\ 2.png);
+}
+
+.imagingles3{
+    height: 170px;
+    width: 300px;
+    background-image: url(imag\ inglés\ 3.png);
+}
+
+.imagingles4{
+    height: 170px;
+    width: 300px;
+    background-image: url(imag\ inglés\ 4.png);
+
+}
+
+.imagingles5{
+    height: 170px;
+    width: 300px;
+    background-image: url(imag\ inglés\ 5.png);
+}
+
+.imagingles6{
+    height: 170px;
+    width: 300px;
+    background-image: url(imag\ inglés\ 6.png);
+}
+
+.imagingles7{
+    height: 170px;
+    width: 300px;
+    background-image: url(imag\ inglés\ 7.png);
+}
+
+.imagingles8{
+    height: 170px;
+    width: 300px;
+    background-image: url(imag\ inglés\ 8.png);
+}
+
+.imagingles9{
+    height: 170px;
+    width: 300px;
+    background-image: url(imag\ inglés\ 9.png);
+}
+
+.imagingles10{
+    height: 170px;
+    width: 300px;
+    background-image: url(imag\ inglés\ 10.png);
+}
+
+.imagingles11{
+    height: 170px;
+    width: 300px;
+    background-image: url(imag\ inglés\ 11.png);
+}
+
+.imagingles12{
+    height: 170px;
+    width: 300px;
+    background-image: url(imag\ inglés\ 12.png);
+}
+
+.imagingles13{
+    height: 170px;
+    width: 300px;
+    background-image: url(imag\ inglés\ 13.png);
+}
+
+.imagingles14{
+    height: 170px;
+    width: 300px;
+    background-image: url(imag\ inglés\ 14.png);
+}
+.imagingles15{
+    height: 170px;
+    width: 300px;
+    background-image: url(imag\ inglés\ 15.png);
+}
+
+
+
+
+

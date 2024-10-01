@@ -121,8 +121,18 @@ background-image: url(tecno\ img.jpg);
     width: 300px;
     background-image: url(imag\ inglés\ 15.png);
 }
-
-
+.excel{
+    height: 300px;
+    width: 400px;
+    background-image: url("excel.png");
+    background-repeat: no-repeat;
+}
+ .excel2{
+    height: 700px;
+    width: 990px;
+    background-image: url("excel\ 2.png");
+    background-repeat: no-repeat;
+}
 
 
 

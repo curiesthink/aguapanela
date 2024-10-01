@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Funciones Excel | Apunte</title>
+<meta content='chrome=1' http-equiv='X-UA-Compatible'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='learning, study' itemprop='educationalUse' name='educationalUse'>
+<meta content='mixed' itemprop='interactivityType' name='interactivityType'>
+<meta content='true' itemprop='isFamilyFriendly' name='isFamilyFriendly'>
+<meta content='telephone=no' name='format-detection'>
+<meta content='width=device-width' name='viewport'>
+<link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+<link href='/apple-touch-icon-57x57.png' rel='apple-touch-icon' sizes='57x57'>
+<link href='/apple-touch-icon-60x60.png' rel='apple-touch-icon' sizes='60x60'>
+<link href='/apple-touch-icon-72x72.png' rel='apple-touch-icon' sizes='72x72'>
+<link href='/apple-touch-icon-76x76.png' rel='apple-touch-icon' sizes='76x76'>
+<link href='/apple-touch-icon-114x114.png' rel='apple-touch-icon' sizes='114x114'>
+<link href='/apple-touch-icon-120x120.png' rel='apple-touch-icon' sizes='120x120'>
+<link href='/apple-touch-icon-144x144.png' rel='apple-touch-icon' sizes='144x144'>
+<link href='/apple-touch-icon-152x152.png' rel='apple-touch-icon' sizes='152x152'>
+<link href='/apple-touch-icon-180x180.png' rel='apple-touch-icon' sizes='180x180'>
+<link href='/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
+<link href='/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
+<link href='/favicon-96x96.png' rel='icon' sizes='96x96' type='image/png'>
+<link href='/android-chrome-192x192.png' rel='icon' sizes='192x192' type='image/png'>
+<link href='//fastlane.rubiconproject.com/' rel='dns-prefetch'>
+<meta content='/smalltile.png' name='msapplication-square70x70logo'>
+<meta content='/mediumtile.png' name='msapplication-square150x150logo'>
+<meta content='/widetile.png' name='msapplication-wide310x150logo'>
+<meta content='/largetile.png' name='msapplication-square310x310logo'>
+<link href='/manifest.json' rel='manifest'>
+
+
+  <!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+  <script type="text/javascript" nonce="" async=true>
+    (function() {
+      var host = 'goconqr.com';
+      var element = document.createElement('script');
+      var firstScript = document.getElementsByTagName('script')[0];
+      var url = 'https://cmp.quantcast.com'
+        .concat('/choice/', 'xVCZkU_vQprcQ', '/', host, '/choice.js?tag_version=V2');
+      var uspTries = 0;
+      var uspTriesLimit = 3;
+      element.async = true;
+      element.type = 'text/javascript';
+      element.src = url;
+
+      firstScript.parentNode.insertBefore(element, firstScript);
+
+      function makeStub() {
+        var TCF_LOCATOR_NAME = '__tcfapiLocator';
+        var queue = [];
+        var win = window;
+        var cmpFrame;
+
+        function addFrame() {
+          var doc = win.document;
+          var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+          if (!otherCMP) {
+            if (doc.body) {
+              var iframe = doc.createElement('iframe');
+
+              iframe.style.cssText = 'display:none';
+              iframe.name = TCF_LOCATOR_NAME;
+              doc.body.appendChild(iframe);
+            } else {
+              setTimeout(addFrame, 5);
+            }
+          }
+          return !otherCMP;
+        }
+
+        function tcfAPIHandler() {
+          var gdprApplies;
+          var args = arguments;
+
+          if (!args.length) {
+            return queue;
+          } else if (args[0] === 'setGdprApplies') {
+            if (
+              args.length > 3 &&
+              args[2] === 2 &&
+              typeof args[3] === 'boolean'
+            ) {
+              gdprApplies = args[3];
+              if (typeof args[2] === 'function') {
+                args[2]('set', true);
+              }
+            }
+          } else if (args[0] === 'ping') {
+            var retr = {
+              gdprApplies: gdprApplies,
+              cmpLoaded: false,
+              cmpStatus: 'stub'
+            };
+
+            if (typeof args[2] === 'function') {
+              args[2](retr);
+            }
+          } else {
+            if(args[0] === 'init' && typeof args[3] === 'object') {
+              args[3] = Object.assign(args[3], { tag_version: 'V2' });
+            }
+            queue.push(args);
+          }
+        }
+
+        function postMessageEventHandler(event) {
+          var msgIsString = typeof event.data === 'string';
+          var json = {};
+
+          try {
+            if (msgIsString) {
+              json = JSON.parse(event.data);
+            } else {
+              json = event.data;
+            }
+          } catch (ignore) {}
+
+          var payload = json.__tcfapiCall;
+
+          if (payload) {
+            window.__tcfapi(
+              payload.command,
+              payload.version,
+              function(retValue, success) {
+                var returnMsg = {
+                  __tcfapiReturn: {
+                    returnValue: retValue,
+                    success: success,
+                    callId: payload.callId
+                  }
+                };
+                if (msgIsString) {
+                  returnMsg = JSON.stringify(returnMsg);
+                }
+                if (event && event.source && event.source.postMessage) {
+                  event.source.postMessage(returnMsg, '*');
+                }
+              },
+              payload.parameter
+            );
+          }
+        }
+
+        while (win) {
+          try {
+            if (win.frames[TCF_LOCATOR_NAME]) {
+              cmpFrame = win;
+              break;
+            }
+          } catch (ignore) {}
+
+          if (win === window.top) {
+            break;
+          }
+          win = win.parent;
+        }
+        if (!cmpFrame) {
+          addFrame();
+          win.__tcfapi = tcfAPIHandler;
+          win.addEventListener('message', postMessageEventHandler, false);
+        }
+      };
+
+      makeStub();
+
+      var uspStubFunction = function() {
+        var arg = arguments;
+        if (typeof window.__uspapi !== uspStubFunction) {
+          setTimeout(function() {
+            if (typeof window.__uspapi !== 'undefined') {
+              window.__uspapi.apply(window.__uspapi, arg);
+            }
+          }, 500);
+        }
+      };
+
+      var checkIfUspIsReady = function() {
+        uspTries++;
+        if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+          console.warn('USP is not accessible');
+        } else {
+          clearInterval(uspInterval);
+        }
+      };
+
+      if (typeof window.__uspapi === 'undefined') {
+        window.__uspapi = uspStubFunction;
+        var uspInterval = setInterval(checkIfUspIsReady, 6000);
+      }
+    })();
+  </script>
+  <!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+
+<link rel="preconnect" href="https://a.pub.network/" crossorigin />
+<link rel="preconnect" href="https://b.pub.network/" crossorigin />
+<link rel="preconnect" href="https://c.pub.network/" crossorigin />
+<link rel="preconnect" href="https://d.pub.network/" crossorigin />
+<link rel="preconnect" href="https://secure.quantserve.com/" crossorigin />
+<link rel="preconnect" href="https://rules.quantcount.com/" crossorigin />
+<link rel="preconnect" href="https://pixel.quantserve.com/" crossorigin />
+<link rel="preconnect" href="https://cmp.quantcast.com/" crossorigin />
+<link rel="preconnect" href="https://btloader.com/" crossorigin />
+<link rel="preconnect" href="https://api.btloader.com/" crossorigin />
+<link rel="preconnect" href="https://confiant-integrations.global.ssl.fastly.net" crossorigin />
+<link rel="stylesheet" href="https://a.pub.network/goconqr-com/cls.css" />
+<script data-cfasync="false" type="text/javascript" nonce="">
+  var freestar = freestar || {};
+  freestar.queue = freestar.queue || [];
+  freestar.config = freestar.config || {};
+  freestar.config.enabled_slots = [];
+  freestar.initCallback = function () { (freestar.config.enabled_slots.length === 0) ? freestar.initCallbackCalled = false : freestar.newAdSlots(freestar.config.enabled_slots) }
+</script>
+<script src="https://a.pub.network/goconqr-com/pubfig.min.js" async="async" data-cfasync="false"></script>
+
+<link href='https://plus.google.com/+ExamtimeES' rel='publisher'>
+<link href='https://www.goconqr.com/apunte/12397253/funciones-excel' rel='canonical'>
+<meta content='Apunte de funciones numericas y basicas en Excel' name='description'>
+<meta content='Ivan Gómez' name='author'>
+<meta content='https://www.goconqr.com/apunte/12397253/funciones-excel' property='og:url'>
+<meta content='GoConqr' property='og:site_name'>
+<meta content='GoConqr - Funciones Excel' property='og:title'>
+<meta content='Apunte de funciones numericas y basicas en Excel' property='og:description'>
+<meta content='https://cdn.goconqr.com/assets/ogp/note-9de25652b04395b66225211be45d5922e2312e1e5ac520ae0a9c852ca71daf1a.png' property='og:image'>
+<meta content='220' property='og:image:width'>
+<meta content='220' property='og:image:height'>
+<meta content='website' property='og:type'>
+<meta content='index,follow' name='robots'>
+
+<link href='https://www.goconqr.com/en/note/12397253/funciones-excel' hreflang='en' rel='alternate'>
+<link href='https://www.goconqr.com/es/apunte/12397253/funciones-excel' hreflang='es' rel='alternate'>
+<link href='https://www.goconqr.com/pt/nota/12397253/funciones-excel' hreflang='pt' rel='alternate'>
+<link href='https://www.goconqr.com/de/notiz/12397253/funciones-excel' hreflang='de' rel='alternate'>
+<link href='https://www.goconqr.com/apunte/12397253/funciones-excel' hreflang='x-default' rel='alternate'>
+
+<script type="application/ld+json">    
+  {"@context":"http://schema.org","@type":"LearningResource","name":"Funciones Excel","description":"Apunte de funciones numericas y basicas en Excel","learningResourceType":"Apunte","educationalAlignment":[{"@type":"AlignmentObject","alignmentType":"educationalSubject","targetName":"Sin asignar"},{"@type":"AlignmentObject","alignmentType":"educationalSubject","targetName":"General"}],"educationalLevel":"","typicalAgeRange":"","inLanguage":{"@type":"Language","name":"es"},"author":{"@type":"Person","name":"Ivan Gómez"},"dateModified":"2018-02-21T02:10:45Z","dateCreated":"2018-02-21T01:46:42Z","encodingFormat":"text/html","text":"Página 1 FUNCIONES BASICAS En Excel , una funcion es una formula que utiliza palabras especificas en una estructura determinada. las funciones se utilizan para simplificar los procesos de calculo. Existen muchos tipos de funciones en Excel pero todas tienen la misma estructura: Suma (binary/octet-stream) El argumento de una funcion es el ambito de aplicacion de la misma. Página 2 Funciones sin Argumento: =HOY():Devulve la fecha actual del sistema =AHORA():Devuelve la hora actual del sistema Fuciones cuyo argumento es un rango de celdas: =SUMA(A1:B15): Suma los valores de las celdas especificados en el rango =PROMEDIO(A1:B15): Calcula el promedio de las celdas especificadas en el rango =MAX(A1:B15): Devuelve el mayor valor numerico en ldas especificadas =MIN(A1:B15): evuelve el menor valor numerico en el rango de celdas especificadas Página 3 FUNCIONES PARA CONTAR DATOS En Excel encontramos un grupo de funciones que se utilizan para contar datos, es decir la cantidad de cedas que contienen determinados tipo de datos. Estas funciones son: =CONTAR(A1:A20): Se utiliza para conocer la cantidad de celdas que contienendatos numericos. =CONTARA(A1:A20): Se utiliza para conocer la cantidad de celdas con datos alfanumericos. =CONTAR.BLANCO(A1:A20): Se utiliza para conocer la cantidad de celdas en blanco. =CONTARA.SI(A1:A20,\"\u0026gt;=7\"): e utiliza para conocer la cantidad de celdas que cumplen con la condicion determinada especificada en el argumento.","url":"https://www.goconqr.com/apunte/12397253/funciones-excel","thumbnailUrl":"https://cdn.goconqr.com/uploads/media/image/14002180/thumb_b5b94469-acea-4f2d-a7ec-24cd6a53e233.png","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":"33"},{"@type":"InteractionCounter","interactionType":"http://schema.org/OrganizeAction","userInteractionCount":"0"},{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":"0"}]}
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdn.goconqr.com/assets/application-resource-canonical-5efeeb8e5a56b9a3039a1adde23851b9fa558bebd1e607a5883361cb992d9704.css" media="all" />
+<link rel="stylesheet" href="https://cdn.goconqr.com/assets/application-print-f4fb0580ba4fa4e2771360bb180fa9ddd770e81767032507e1f9147c9c39d395.css" media="print" />
+<script nonce="">
+  I18n_settings                    = {}
+  I18n_settings.defaultLocale      = "en";
+  I18n_settings.locale             = "es-ES";
+  I18n_settings.fallbacks          = true;
+  I18n_settings.date_format        = "dd/mm/yy";
+  I18n_settings.dayjs_date_format  = "DD/MM/YYYY";
+</script>
+<script src="https://cdn.goconqr.com/assets/i18n_js/manifest-3db21ad905d8660e34603869918a932c009d87f5e31e92aecd3a5ec64f225e95.js"></script>
+<script src="https://cdn.goconqr.com/assets/i18n_translations/es/manifest-d8150ed94a4309b28fff402874ac2ad1dfd5ae3b70ba28f286432d756aafd370.js"></script>
+
+<script src="https://cdn.goconqr.com/assets/application-resource-canonical-6a055a3034a28d13d80a83320f6804c2de2ebc1f823ed99c1fb770e558b62f9b.js" defer="defer"></script>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="5EGKydOMZmID9x9liXp0yLkrSn2-upFFrFnucsLGAgjYxeFC2NCxFZ5vP-D4unxWFaW8wR6y4t4ZkN-5Vw7_7A" />
+<script src="https://teams.microsoft.com/share/launcher.js" defer="defer" async="async"></script>
+
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+
+<link as='document' href='/es-ES/p/12397253?canonical=true&amp;frame=true&amp;no_cache=true' id='preload_resource_link' rel='preload'>
+<link href='/es-ES/p/12397253?canonical=true&amp;frame=true&amp;no_cache=true' rel='prerender'>
+</head>
+<body class='canonical es'>
+<div id='current_user' style='display: none'>
+null
+</div>
+<div id='user_country_code' style='display: none'>
+CO
+</div>
+<script nonce="">
+  var USER_COUNTRY_CODE = document.getElementById("user_country_code").innerHTML;
+  CURRENT_USER = JSON.parse(document.getElementById("current_user").innerHTML)
+  
+  document.addEventListener("DOMContentLoaded", function(){
+    if(CURRENT_USER){
+      $(document).trigger('authenticated_user:init');
+    }
+  });
+</script>
+
+
+  <script async
+    nonce=""
+    src="https://www.googletagmanager.com/gtag/js?id=UA-34963630-1"></script>
+  <script nonce="">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-34963630-1', {
+      send_page_view: false,
+      cookie_flags: 'secure;samesite=none'
+    });
+
+      gtag('event', 'page_view', {
+        page_path: '/apunte/12397253/funciones-excel'
+      })
+  </script>
+
+
+  <div id="FreeStarVideoAdContainer">
+    <script type="text/javascript" nonce="">
+      freestar.queue.push(function() {
+        freestar.newVideo("FreeStarVideoAdContainer");
+      });
+    </script>
+  </div>
+
+<div id='wrap'>
+<div class='navbar no-print navbar-fixed-top' id='examtime_header'>
+<div class='container'>
+<div class='logo_container'>
+<a href='/es-ES'>
+<div class='logo_loggedout'>
+<img alt="Logotipo de GoConqr" src="https://cdn.goconqr.com/assets/goconqr/logo_sign_in_modal-2bdda9a48c8bdd8a95736ae2ae612da157467c321b3290ec90de82bfa8dbd39e.png" />
+</div>
+</a>
+</div>
+<div class='nav-tooltip' id='search_nav' title='Buscar'>
+<i class='icon-search' title='Buscar'></i>
+</div>
+<div class='unauthenticated' id='search_div'>
+<form class="main_search_form" data-turboform="true" action="/es-ES/search" accept-charset="UTF-8" method="get">
+<div class='search_field_container'><input autocomplete='off' class='typeahead site_search search_field' id='q' name='q' placeholder='Busca contenido, personas o grupos' type='text' value=''><div class='mainsearch btn search_button'>
+<i class='icon-search' title='Buscar'></i>
+</div>
+</div>
+</form>
+
+</div>
+
+<div class='navbar-nav navbar-right header_signin'>
+<ul>
+<li>
+<button class='btn btn-link navbar-btn' id='sign_in'>
+Iniciar Sesión
+</button>
+</li>
+<li>
+<a id="sign_up" rel="nofollow" href="/es-ES/users/sign_up"><button class='btn navbar-btn btn-success'>
+<span class='long'>Regístrate Gratis</span>
+<span class='short'>Registro</span>
+</button>
+</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+
+<div id='et_loading_spinner' style='display: none'></div>
+
+<div class='contents_wrap'>
+
+<section id='content'>
+<noscript>
+<div class='alert alert-danger'>
+Hemos detectado que no tienes habilitado Javascript en tu navegador. La naturaleza dinámica de nuestro sitio requiere que Javascript esté habilitado para un funcionamiento adecuado.
+Por favor lee nuestros <a href='/terms_and_conditions' target='_blank'>términos y condiciones</a> para más información.
+</div>
+</noscript>
+</section>
+
+<div class='study_aid with_ads' id='canonical_wrapper'>
+<div class='upper_wrapper'>
+<div class='container main'>
+<div class='ad_section mid_left'>
+  <div align="center" data-freestar-ad="__262x262 __262x262" id="goconqr_sidebar_left_1">
+    <script data-cfasync="false" type="text/javascript" nonce="">
+      freestar.config.enabled_slots.push({ placementName: "goconqr_sidebar_left_1", slotId: "goconqr_sidebar_left_1" });
+    </script>
+  </div>
+
+</div>
+<div class='content_pane'>
+<div class='et_loading_spinner'></div>
+<iframe allowfullscreen class='resource' mozallowfullscren name='resource' src='/es-ES/p/12397253?canonical=true&amp;frame=true&amp;no_cache=true' webkitallowfullscreen></iframe>
+</div>
+<div class='ad_section mid_right'>
+  <div align="center" data-freestar-ad="__262x262 __262x262" id="goconqr_sidebar_right">
+    <script data-cfasync="false" type="text/javascript" nonce="">
+      freestar.config.enabled_slots.push({ placementName: "goconqr_sidebar_right", slotId: "goconqr_sidebar_right"});
+    </script>
+  </div>
+
+</div>
+</div>
+<div id='next_up'>
+<a class='link'>
+<div class='heading'>
+<h3>Siguiente</h3>
+<div class='resource_type_icon'></div>
+</div>
+<p class='title'></p>
+<p class='author'></p>
+</a>
+</div>
+</div>
+<div class='lower_wrapper'>
+<div class='container main'>
+<div class='canonical_meta_section'>
+<div id='resource_meta_content'>
+<div class='actions_section boxed'>
+<div class='social_actions'>
+<div class='share_buttons'>
+<a class='social facebook' data-url='https://www.goconqr.com/es-ES/apunte/12397253/funciones-excel' href='http://www.facebook.com/sharer/sharer.php?u=https://www.goconqr.com/es-ES/apunte/12397253/funciones-excel' rel='noopener noreferrer' target='_blank' title='Compartir en Facebook'>
+<div class='social_sprite bg-footer-icon_social_facebook_2x'></div>
+</a>
+<a class='social twitter' href='https://twitter.com/intent/tweet?text=funciones-excel%20&amp;url=https://www.goconqr.com/es-ES/apunte/12397253/funciones-excel&amp;via=GoConqr_es' rel='noopener noreferrer' target='_blank' title='Compartir en Twitter'>
+<div class='social_sprite bg-footer-icon_social_twitter_2x'></div>
+</a>
+<a class='social linkedin' href='http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.goconqr.com/es-ES/apunte/12397253/funciones-excel&amp;title=funciones-excel&amp;source=GoConqr' rel='noopener noreferrer' target='_blank' title='Compartir en LinkedIn'>
+<div class='social_sprite bg-footer-icon_social_linkedin_2x'></div>
+</a>
+<span class='social'>
+<span class="teams-share-button" target="_blank" rel="noopener noreferrer" title="Compartir en MS Teams" data-href="https://teams.microsoft.com/l/stage/e5e5c455-c92a-46b7-adbc-da0f9a3e787f/0?context={&quot;contentUrl&quot;:&quot;https%3A%2F%2Fwww.goconqr.com%2Fp%2F12397253%3Fframe%3Dtrue%26ms_teams%3D1%26stage_view%3D1&quot;,&quot;websiteUrl&quot;:&quot;https%3A%2F%2Fwww.goconqr.com%2Fapunte%2F12397253%2Ffunciones-excel&quot;,&quot;name&quot;:&quot;Funciones+Excel&quot;}" data-icon-px-size="60" data-preview="true"></span>
+</span>
+</div>
+
+<span class='email_share'>
+<span class='canonical_sprite bg-canonical-email' title='Enviar un enlace a un amigo'></span>
+</span>
+<span class='social_share'>
+<span class='canonical_sprite bg-canonical-social' title='Enlazar en un blog o compartir en GoConqr'></span>
+</span>
+<span class='print'>
+<span class='canonical_sprite bg-canonical-print' title='Imprimir'></span>
+</span>
+</div>
+<div class='app_actions'>
+<span class='clone' title=''>
+<a class="btn btn-info copy_and_edit" href="#">Copiar y Editar</a>
+</span>
+</div>
+<div aria-hidden='true' class='modal' id='sign_up_message' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-cta modal-content'>
+<div class='row'>
+<div class='col-12'>
+<div class='cta'>
+¡Debes iniciar sesión para completar esta acción!
+</div>
+<a target="_blank" class="btn btn-success btn-cta ms_teams_external" href="/es-ES/users/sign_up">Regístrate gratis</a>
+<div class='cta-footer-text'>
+<a class='sign_in_call_to_action' data-locale='es-ES'>
+Inicia sesión aquí
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+<div class='meta_details_section publicmeta boxed'>
+<div class='hidden'>
+<div id='study_aid_id'>12397253</div>
+<div id='current_user_is_author'></div>
+</div>
+<div class='titlebar'>
+<h1 class='study_aid_title' title='Funciones Excel'>
+Funciones Excel
+</h1>
+</div>
+<div class='content'>
+<div id='study_aid_description'>
+<div class='review_heading'>
+<div class='title'>
+<h3>Descripción</h3>
+</div>
+</div>
+<span class='description_text' itemprop='description'>
+Apunte de funciones numericas y basicas en Excel
+</span>
+</div>
+<div>
+<div class='study_aid_tags'>
+<span class='sprite bg-icon-price_tag canonical_sprite bg-canonical-price_tag' title='Etiquetas'></span>
+<span class='no_tags_placeholder' style='display: none'>
+Sin etiquetas
+</span>
+<ul class='tag_list'>
+<li>
+<a rel="nofollow" class="ms_teams_external" target="_top" href="/es-ES/tags/funciones">funciones</a>
+</li>
+<li>
+<a rel="nofollow" class="ms_teams_external" target="_top" href="/es-ES/tags/numerico">numerico</a>
+</li>
+<li>
+<a rel="nofollow" class="ms_teams_external" target="_top" href="/es-ES/tags/excel">excel</a>
+</li>
+<li>
+<a rel="nofollow" class="ms_teams_external" target="_top" href="/es-ES/tags/segundo+semestre">segundo semestre</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class='meta_row'>
+<div class='avatar_sidebar'>
+<div class='avatar'>
+<a href="/es-ES/profiles/5252550"><img alt="Ivan Gómez" title="Ivan Gómez" src="https://secure.gravatar.com/avatar/2ab17a3296dffd83313429f1621d12ec?default=retro&rating=PG&size=45" width="45" height="45" /></a>
+</div>
+</div>
+<div class='meta_details'>
+Apunte por <a class="user_link tex2jax_ignore " href="/es-ES/profiles/5252550">Ivan Gómez</a>, actualizado  hace más de 1 año
+<a class='btn-all show_revision_audit hidden' href='#'>
+Más
+</a>
+<a class='btn-all hide_revision_audit hidden' href='#'>
+Menos
+</a>
+<div class='revision_audit'>
+<div class='meta_section revision_audit_list publicmeta_sub'>
+<table class='meta_revision'>
+<tr>
+<td class='avatar'>
+<img alt="Ivan Gómez" title="Ivan Gómez" src="https://secure.gravatar.com/avatar/2ab17a3296dffd83313429f1621d12ec?default=retro&rating=PG&size=32" width="32" height="32" />
+</td>
+<td class='details'>
+<div class='action'>
+Creado por <a class="user_link ms_teams_external tex2jax_ignore " href="/es-ES/profiles/5252550">Ivan Gómez</a>
+ hace más de 6 años
+</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td class='date_action'></td>
+<td><div class='version'></div></td>
+</tr>
+
+</table>
+</div>
+
+</div>
+<div class='meta_stat_container'>
+<div class='meta_stat'>
+<div class='views' title='Visitas'>
+<span class='canonical_sprite bg-canonical-eye'></span>
+<span class='view_count'>
+33
+</span>
+</div>
+</div>
+<div class='meta_stat'>
+<div class='shares pin_resource' title='Pinear a…'>
+<span class='canonical_sprite bg-canonical-pin'></span>
+<span class='pinned_count'>
+0
+</span>
+</div>
+</div>
+<div class='meta_stat'>
+<a class="comments_link" href="#comments_panel"><div class='comments' title='Comentarios'>
+<span class='canonical_sprite bg-canonical-balloon_left'></span>
+<span class='comments_count'>
+0
+</span>
+</div>
+</a></div>
+<div class='meta_stat'>
+<div class='ratings' title='Valoración'></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='ad_section'>
+  <div align="center" data-freestar-ad="__262x262 __728x250" id="goconqr_leaderboard_1">
+    <script data-cfasync="false" type="text/javascript" nonce="">
+      freestar.config.enabled_slots.push({ placementName: "goconqr_leaderboard_1", slotId: "goconqr_leaderboard_1" });
+    </script>
+  </div>
+
+</div>
+<div class='summary_section boxed'>
+<div class='summary_content_wrapper'>
+<div class='titlebar'>
+<h2>Resumen del Recurso</h2>
+</div>
+<div class='content'>
+<div class='note_page'>
+<h3>Página 1</h3>
+<div class='clipping'>
+<p>FUNCIONES BASICAS
+
+En Excel , una funcion es una formula que utiliza palabras especificas en una estructura determinada. las funciones se utilizan para simplificar los procesos de calculo.
+
+Existen muchos tipos de funciones en Excel pero todas tienen la misma estructura:</p>
+</div>
+<div class='clipping'>
+<span><a rel="nofollow" href="https://cdn.goconqr.com/uploads/media/image/14002180/desktop_b5b94469-acea-4f2d-a7ec-24cd6a53e233.png">Suma (binary/octet-stream)</a></span>
+</div>
+<div class='clipping'>
+<p>El argumento de una funcion es el ambito de aplicacion de la misma.</p>
+</div>
+</div>
+<div class='note_page'>
+<h3>Página 2</h3>
+<div class='clipping'>
+<p>Funciones sin Argumento:
+
+=HOY():Devulve la fecha actual del sistema
+
+=AHORA():Devuelve la hora actual del sistema
+
+ 
+
+Fuciones cuyo argumento es un rango de celdas:
+
+=SUMA(A1:B15): Suma los valores de las celdas especificados en el rango
+
+=PROMEDIO(A1:B15): Calcula el promedio de las celdas especificadas en el rango
+
+=MAX(A1:B15): Devuelve el mayor valor numerico en ldas especificadas
+
+=MIN(A1:B15): evuelve el menor valor numerico en el rango de celdas especificadas</p>
+</div>
+</div>
+<div class='note_page'>
+<h3>Página 3</h3>
+<div class='clipping'>
+<p>FUNCIONES PARA CONTAR DATOS
+
+En Excel encontramos un grupo de funciones que se utilizan para contar datos, es decir la cantidad de cedas que contienen determinados tipo de datos.
+
+Estas funciones son:
+
+=CONTAR(A1:A20): Se utiliza para conocer la cantidad de celdas que contienendatos numericos.
+
+=CONTARA(A1:A20): Se utiliza para conocer la cantidad de celdas con datos alfanumericos.
+
+=CONTAR.BLANCO(A1:A20): Se utiliza para conocer la cantidad de celdas en blanco.
+
+=CONTARA.SI(A1:A20,"&gt;=7"): e utiliza para conocer la cantidad de celdas que cumplen con la condicion determinada especificada en el argumento.
+
+ </p>
+</div>
+</div>
+</div>
+
+<div class='fade_out_overlay'></div>
+</div>
+<a class='show_full_summary btn btn-default'>
+Mostrar resumen completo
+</a>
+<a class='hide_full_summary btn btn-default'>
+Ocultar resumen completo
+</a>
+</div>
+
+<div class='comments_section boxed'>
+<div id='comments_panel'></div>
+</div>
+</div>
+<div id='suggestions_content'>
+<div class='brochure_link boxed'>
+<p>¿Quieres crear tus propios <a target="_blank" href="/es/apuntes/">Apuntes</a> <strong>gratis</strong> con GoConqr? <a target="_blank"href="/es/apuntes/">Más información</a>.</p>
+</div>
+<div class='suggestions_wrapper'>
+<div id='suggestions_list'>
+<h3>Similar</h3>
+<div class='suggestion'>
+<div class="resource-tile resource col-lg-
+  
+  
+  "
+  data-id="952373">
+  <div class="resource-tile__content clearfix">
+    <a class="resource-tile__link" href="/apunte/952373/aplicaciones-de-las-derivadas"></a>
+    <div class="resource-tile__handles">
+      
+    </div>
+    
+    
+    <div class="resource-tile__img">
+      <div class="link_images note"></div>
+    </div>
+    <div class="resource-tile__body">
+      <div class="resource-tile__title -truncate-text tex2jax_ignore">Aplicaciones de las derivadas</div>
+        <span class="resource-tile__author -truncate-text">
+           <a href="/es-ES/profiles/481110">Marta Arroyo</a>
+        </span>
+    </div>
+      <div class="tile_overlay"></div>
+  </div>
+</div>
+
+</div>
+<div class='suggestion'>
+<div class="resource-tile resource col-lg-
+  
+  
+  "
+  data-id="3418896">
+  <div class="resource-tile__content clearfix">
+    <a class="resource-tile__link" href="/ficha/3418896/funciones-o-formulas-en-excel"></a>
+    <div class="resource-tile__handles">
+      
+    </div>
+    
+    
+    <div class="resource-tile__img">
+      <div class="link_images flash_card_deck"></div>
+    </div>
+    <div class="resource-tile__body">
+      <div class="resource-tile__title -truncate-text tex2jax_ignore">Funciones o Fórmulas en Excel</div>
+        <span class="resource-tile__author -truncate-text">
+           <a href="/es-ES/profiles/1744673">Esteban Quesada</a>
+        </span>
+    </div>
+      <div class="tile_overlay"></div>
+  </div>
+</div>
+
+</div>
+<div class='suggestion'>
+<div class="resource-tile resource col-lg-
+  
+  
+  "
+  data-id="4513075">
+  <div class="resource-tile__content clearfix">
+    <a class="resource-tile__link" href="/mapamental/4513075/mapa-conceptual-funciones-en-excel"></a>
+    <div class="resource-tile__handles">
+      
+    </div>
+    
+    
+    <div class="resource-tile__img">
+      <div class="link_images mind_map"></div>
+    </div>
+    <div class="resource-tile__body">
+      <div class="resource-tile__title -truncate-text tex2jax_ignore">MAPA CONCEPTUAL FUNCIONES EN EXCEL</div>
+        <span class="resource-tile__author -truncate-text">
+           <a href="/es/profiles/2223327">Montse Ramos Garcia</a>
+        </span>
+    </div>
+      <div class="tile_overlay"></div>
+  </div>
+</div>
+
+</div>
+<div class='suggestion'>
+<div class="resource-tile resource col-lg-
+  
+  
+  "
+  data-id="4104689">
+  <div class="resource-tile__content clearfix">
+    <a class="resource-tile__link" href="/cuestionario/4104689/informatica-aplicada-a-la-educacion"></a>
+    <div class="resource-tile__handles">
+      
+    </div>
+    
+    
+    <div class="resource-tile__img">
+      <div class="link_images quiz"></div>
+    </div>
+    <div class="resource-tile__body">
+      <div class="resource-tile__title -truncate-text tex2jax_ignore">INFORMÁTICA APLICADA A LA EDUCACIÓN</div>
+        <span class="resource-tile__author -truncate-text">
+           <a href="/es/profiles/2004211">Alex Cocanguilla</a>
+        </span>
+    </div>
+      <div class="tile_overlay"></div>
+  </div>
+</div>
+
+</div>
+<div class='suggestion'>
+<div class="resource-tile resource col-lg-
+  
+  
+  "
+  data-id="4536315">
+  <div class="resource-tile__content clearfix">
+    <a class="resource-tile__link" href="/mapamental/4536315/funciones-en-excel"></a>
+    <div class="resource-tile__handles">
+      
+    </div>
+    
+    
+    <div class="resource-tile__img">
+      <div class="link_images mind_map"></div>
+    </div>
+    <div class="resource-tile__body">
+      <div class="resource-tile__title -truncate-text tex2jax_ignore">FUNCIONES EN EXCEL</div>
+        <span class="resource-tile__author -truncate-text">
+           <a href="/es-ES/profiles/2233002">Ode Bema</a>
+        </span>
+    </div>
+      <div class="tile_overlay"></div>
+  </div>
+</div>
+
+</div>
+<div class='suggestion'>
+<div class="resource-tile resource col-lg-
+  
+  
+  "
+  data-id="12396197">
+  <div class="resource-tile__content clearfix">
+    <a class="resource-tile__link" href="/apunte/12396197/funciones-en-excel"></a>
+    <div class="resource-tile__handles">
+      
+    </div>
+    
+    
+    <div class="resource-tile__img">
+      <div class="link_images note"></div>
+    </div>
+    <div class="resource-tile__body">
+      <div class="resource-tile__title -truncate-text tex2jax_ignore">FUNCIONES EN EXCEL</div>
+        <span class="resource-tile__author -truncate-text">
+           <a href="/es-ES/profiles/5252078">Rodolfo Chávez</a>
+        </span>
+    </div>
+      <div class="tile_overlay"></div>
+  </div>
+</div>
+
+</div>
+<div class='suggestion'>
+<div class="resource-tile resource col-lg-
+  
+  
+  "
+  data-id="5734380">
+  <div class="resource-tile__content clearfix">
+    <a class="resource-tile__link" href="/mapamental/5734380/excel-y-sus-funciones"></a>
+    <div class="resource-tile__handles">
+      
+    </div>
+    
+    
+    <div class="resource-tile__img">
+      <div class="link_images mind_map"></div>
+    </div>
+    <div class="resource-tile__body">
+      <div class="resource-tile__title -truncate-text tex2jax_ignore">Excel y sus funciones</div>
+        <span class="resource-tile__author -truncate-text">
+           <a href="/es-ES/profiles/2713440">sebastian villegas</a>
+        </span>
+    </div>
+      <div class="tile_overlay"></div>
+  </div>
+</div>
+
+</div>
+<div class='suggestion'>
+<div class="resource-tile resource col-lg-
+  
+  
+  "
+  data-id="4540374">
+  <div class="resource-tile__content clearfix">
+    <a class="resource-tile__link" href="/mapamental/4540374/excel-formulas"></a>
+    <div class="resource-tile__handles">
+      
+    </div>
+    
+    
+    <div class="resource-tile__img">
+      <div class="link_images mind_map"></div>
+    </div>
+    <div class="resource-tile__body">
+      <div class="resource-tile__title -truncate-text tex2jax_ignore">EXCEL Fórmulas</div>
+        <span class="resource-tile__author -truncate-text">
+           <a href="/es-ES/profiles/2223131">al210435</a>
+        </span>
+    </div>
+      <div class="tile_overlay"></div>
+  </div>
+</div>
+
+</div>
+<div class='suggestion'>
+<div class="resource-tile resource col-lg-
+  
+  
+  "
+  data-id="26045504">
+  <div class="resource-tile__content clearfix">
+    <a class="resource-tile__link" href="/mapamental/26045504/funcion-si-de-excel"></a>
+    <div class="resource-tile__handles">
+      
+    </div>
+    
+    
+    <div class="resource-tile__img">
+      <div class="link_images mind_map"></div>
+    </div>
+    <div class="resource-tile__body">
+      <div class="resource-tile__title -truncate-text tex2jax_ignore">Función Si de Excel</div>
+        <span class="resource-tile__author -truncate-text">
+           <a href="/es-ES/profiles/9943510">Carolina Angelomé</a>
+        </span>
+    </div>
+      <div class="tile_overlay"></div>
+  </div>
+</div>
+
+</div>
+<div class='suggestion'>
+<div class="resource-tile resource col-lg-
+  
+  
+  "
+  data-id="4536590">
+  <div class="resource-tile__content clearfix">
+    <a class="resource-tile__link" href="/mapamental/4536590/funciones-excel"></a>
+    <div class="resource-tile__handles">
+      
+    </div>
+    
+    
+    <div class="resource-tile__img">
+      <div class="link_images mind_map"></div>
+    </div>
+    <div class="resource-tile__body">
+      <div class="resource-tile__title -truncate-text tex2jax_ignore">Funciones Excel</div>
+        <span class="resource-tile__author -truncate-text">
+           <a href="/es-ES/profiles/2232999">Roberto Barba</a>
+        </span>
+    </div>
+      <div class="tile_overlay"></div>
+  </div>
+</div>
+
+</div>
+<div class='suggestion'>
+<div class="resource-tile resource col-lg-
+  
+  
+  "
+  data-id="12501341">
+  <div class="resource-tile__content clearfix">
+    <a class="resource-tile__link" href="/apunte/12501341/funciones-de-excel"></a>
+    <div class="resource-tile__handles">
+      
+    </div>
+    
+    
+    <div class="resource-tile__img">
+      <div class="link_images note"></div>
+    </div>
+    <div class="resource-tile__body">
+      <div class="resource-tile__title -truncate-text tex2jax_ignore">Funciones de Excel</div>
+        <span class="resource-tile__author -truncate-text">
+           <a href="/es-ES/profiles/5252553">Andrea  Aguila </a>
+        </span>
+    </div>
+      <div class="tile_overlay"></div>
+  </div>
+</div>
+
+</div>
+
+</div>
+<div class='more'>
+<a href="/es-ES/library">Explorar la Librería</a>
+</div>
+<div class='clearfix'></div>
+</div>
+</div>
+</div>
+<div class='ad_section'>
+  <div align="center" data-freestar-ad="__262x262 __728x250" id="goconqr_leaderboard_2">
+    <script data-cfasync="false" type="text/javascript" nonce="">
+      freestar.config.enabled_slots.push({ placementName: "goconqr_leaderboard_2", slotId: "goconqr_leaderboard_2" });
+    </script>
+  </div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class='examtime_application_footer' id='examtime_footer'>
+<footer>
+<div class='container'>
+<div class='row'>
+<div class='col-12'>
+<div class='footer-links'>
+<ul class='nav nav-pills'>
+<li>
+<a href="/?mobile=1">Versión móvil</a>
+</li>
+<li>
+<a href="/es-ES/payments/compare">Planes</a>
+</li>
+<li>
+<a href="/es-ES/feedback">Escríbenos</a>
+</li>
+<li>
+<a href="https://www.goconqr.com/es/faq/34-Sobre-GoConqr?with_blurb=1">Preguntas Frecuentes</a>
+</li>
+<li>
+<a href="/es-ES/terms_and_conditions">Términos</a>
+</li>
+<li>
+<a href="/es-ES/privacy_policy">Privacidad</a>
+</li>
+<li>
+<a href="https://www.goconqr.com/es/info/publicidad">Publicítate</a>
+</li>
+<li>
+<a href="https://www.goconqr.com/es/blog">Blog</a>
+</li>
+<li>
+<a href="/directory/courses">Directorio</a>
+</li>
+<li>
+<button class='manage_consent'>
+Gestionar el consentimiento
+</button>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-12 footer-social-container'>
+<div class='footer-social-links'>
+<a href='https://www.facebook.com/SomosGoConqr' rel='noopener noreferrer' target='_blank' title='Síguenos en Facebook'>
+<div class='social_sprite bg-footer-icon_social_facebook_2x'></div>
+</a>
+<a href='https://twitter.com/goconqr_es' rel='noopener noreferrer' target='_blank' title='Síguenos en Twitter'>
+<div class='social_sprite bg-footer-icon_social_twitter_2x'></div>
+</a>
+<a href='http://www.linkedin.com/company/3278724' rel='noopener noreferrer' target='_blank' title='Conecta con nosotros en LinkedIn'>
+<div class='social_sprite bg-footer-icon_social_linkedin_2x'></div>
+</a>
+<a href='https://www.youtube.com/channel/UC9WiYC2_2mitJiHNBQHJRQg' rel='noopener noreferrer' target='_blank' title='Suscríbete a nuestro canal de YouTube'>
+<div class='social_sprite bg-footer-icon_social_youtube_2x'></div>
+</a>
+<a href='https://blog.goconqr.com/es/feed/' rel='noopener noreferrer' target='_blank' title='Sigue nuestro blog'>
+<div class='social_sprite bg-footer-icon_social_rss_2x'></div>
+</a>
+
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-12 footer-copyright-container'>
+<div class='l-copyright'>
+<ul class='regions'>
+<li>
+<a title="Portugués (Brasil)" href="/pt-BR"><div class='flag_sprite bg-footer-icon_flag_br_2x' title='Portugués (Brasil)'></div>
+</a></li>
+<li>
+<a title="Deutsch" href="/de"><div class='flag_sprite bg-footer-icon_flag_de_2x' title='Deutsch'></div>
+</a></li>
+<li>
+<a title="Español" href="/es"><div class='flag_sprite bg-footer-icon_flag_es_2x' title='Español'></div>
+</a></li>
+<li>
+<a title="Inglés" href="/en"><div class='flag_sprite bg-footer-icon_flag_en_2x' title='Inglés'></div>
+</a></li>
+</ul>
+
+<span class='copyright_text'>
+©
+2024
+ExamTime Ltd.
+</span>
+</div>
+</div>
+</div>
+
+</div>
+</footer>
+
+</div>
+
+</body>
+</html>

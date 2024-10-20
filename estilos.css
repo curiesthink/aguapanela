@@ -126,18 +126,33 @@ background-image: url(tecno\ img.jpg);
     width: 400px;
     background-image: url("excel.png");
     background-repeat: no-repeat;
-}
- .excel2{
-    height: 700px;
-    width: 990px;
-    background-image: url("excel\ 2.png");
-    background-repeat: no-repeat;
-}
+}   
 .logoIA{
     height: 700px;
     width: 990px;
     background-image: url("Leonardo_Phoenix_Create_a_logo_that_combines_the_themes_of_Eng_3.jpg");
     background-repeat: no-repeat;
 }
+.imgtec3{
+    height: 1000px;
+    width: 900px;
+    background-image: url("imagen\ 1.\ jpeg.webp");
+    background-repeat: no-repeat
+}
+.imgtec2{
+    height: 1000px;
+    width: 1000px;
+    background-image: url("imagen\ 2.jpeg.jpeg");
+    background-repeat: no-repeat
+}  
+.imgtec1{
+    height: 1000px;
+    width: 1000px;
+    background-image: url("imagen\ 3.jpeg.webp");
+    background-repeat: no-repeat 
+}
 
+
+
+    
 

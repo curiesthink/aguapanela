@@ -152,7 +152,11 @@ background-image: url(tecno\ img.jpg);
     background-repeat: no-repeat 
 }
 
+.imgsociales3{
+    height: 800px;
+    width: 1000px;
+    background-image: url("imgsociales3.png");
+    background-repeat: no-repeat 
+}
 
-
-    
 
